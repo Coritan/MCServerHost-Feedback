@@ -1,0 +1,122 @@
+name: Bug report
+description: Something on MCServerHost does not work as it should.
+labels: ["bug", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Everyone can read this issue, so leave out passwords, API keys, email addresses and payment details.
+
+        For a problem with your own account, a payment or one of your servers, [open a support ticket](https://www.mcserverhost.com/support) instead. We can see your account there.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: The part of MCServerHost the bug is in.
+      options:
+        - Website, sign up and sign in
+        - Ordering, billing and plans
+        - Server dashboard and console
+        - Files, backups and snapshots
+        - Plugins, mods and modpacks
+        - Server software and versions
+        - Join address, domains and IPs
+        - Databases
+        - Schedules
+        - Subusers
+        - Performance, crashes and uptime
+        - Community (forum, guides, server list)
+        - Support tickets
+        - Email, object storage and other add-ons
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+      placeholder: I clicked Restart on my server's dashboard. I expected it to come back online, but it stayed on Starting for ten minutes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The steps that make the bug happen. If it happens only sometimes, say how often.
+      placeholder: |
+        1. Open a server's dashboard.
+        2. Click Restart.
+        3. Watch the status at the top of the page.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Minecraft edition
+      options:
+        - Java Edition
+        - Bedrock Edition
+        - Both
+        - Not about a game server
+    validations:
+      required: false
+
+  - type: dropdown
+    id: plan
+    attributes:
+      label: Plan
+      options:
+        - Free server
+        - Paid server
+        - Not about a server
+    validations:
+      required: false
+
+  - type: input
+    id: software
+    attributes:
+      label: Server software and version
+      placeholder: Paper 1.21.4
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      description: For a problem on the website or the dashboard.
+      placeholder: Chrome on Windows 11
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error message or console output
+      description: Paste the error you saw, or the console lines from around the time it happened. Check it holds no passwords or tokens.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag images or a short video here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched the open and closed issues, and this bug is not reported yet.
+          required: true
+        - label: This report holds no passwords, API keys, email addresses or payment details.
+          required: true

@@ -1,0 +1,66 @@
+name: Feature request
+description: Suggest a new feature, or a change to one MCServerHost has.
+labels: ["feature", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Post one idea per request, so each one can be voted on and closed on its own. If someone has already asked for it, add a thumbs up reaction to their first post instead.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: The part of MCServerHost the feature belongs to.
+      options:
+        - Website, sign up and sign in
+        - Ordering, billing and plans
+        - Server dashboard and console
+        - Files, backups and snapshots
+        - Plugins, mods and modpacks
+        - Server software and versions
+        - Join address, domains and IPs
+        - Databases
+        - Schedules
+        - Subusers
+        - Performance, crashes and uptime
+        - Community (forum, guides, server list)
+        - Support tickets
+        - Email, object storage and other add-ons
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What you are trying to do, and what stops you today.
+      placeholder: When my server crashes, I only find out when a player messages me, sometimes hours later.
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature
+    attributes:
+      label: The feature you want
+      description: How it would work. If another host or tool does it well, name it.
+      placeholder: Send a message to a Discord channel I choose when my server stops without anyone pressing Stop.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How you manage today
+      description: Any workaround you use now.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched the open and closed issues, and nobody has asked for this yet.
+          required: true
