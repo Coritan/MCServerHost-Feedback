@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Help with your account, a payment or a server
+    url: https://www.mcserverhost.com/support
+    about: Open a support ticket. Our team can see your account there and replies privately.
+  - name: Check for an outage
+    url: https://www.mcserverhost.com/status
+    about: See whether a service is down before you report it.
+  - name: Chat with the community
+    url: https://discord.gg/mcserverhost
+    about: Ask other server owners and our team on Discord.
